@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎮 Memory Match Game</h1>
+
+  <div class="controls">
+    <select id="icon-set">
+      <option value="Animals">🐾 Animals</option>
+      <option value="Fruits">🍎 Fruits</option>
+      <option value="Flags" selected>🌍 Flags</option>
+      <option value="Sports">🏀 Sports</option>
+    </select>
+
+    <select id="difficulty">
+      <option>Easy</option>
+      <option selected>Medium</option>
+      <option>Hard</option>
+    </select>
+
+    <button id="new-game">New Game</button>
+    <button id="reset-game">Reset</button>
+  </div>
+
+  <div class="stats">
+    Moves: <span id="move-count">0</span> |
+    Matched: <span id="match-count">0/6</span>
+  </div>
+
+  <div id="game-board"></div>
+
+  <p class="instructions">
+    👇 Click cards to flip them and find matching pairs!<br/>
+    🎯 Try to complete the game in as few moves as possible.
+  </p>
+
+  <p id="victory-message" class="hidden" style="font-size:1.3rem; color: green; margin-top: 20px;">
+    🎉 You Won! Great job matching all the pairs! 🎉
+  </p>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
